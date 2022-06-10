@@ -1,6 +1,14 @@
 <?php
 include './views/components/BasicHeader.php';
 basicHeader("Register Student");
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['Start_Register'])) {
+    
+    setcookie('student', 'initial', time() + 86400);
+    header("Location: ./student.php?register=step-1");
+
+}
+
 ?>
 <br><br>
 <section class="hero hero-sm py-2">
@@ -17,7 +25,6 @@ basicHeader("Register Student");
                 <li>Age</li>
                 <li>Phone Number</li>
                 <li>Email</li>
-                <li>Category of Study</li>
                 <li>Parent Name</li>
                 <li>Parent Phone Number</li>
                 <li>Home Address</li>
@@ -151,9 +158,11 @@ basicHeader("Register Student");
             <p>Please ask to the clerk on duty to confirm your registration.</p>
             <br>
         </div>
-        <p class="text-right">
-            <a href="/student.php?register=step-1" class="btn btn-primary">Continue</a>
-        </p>
+        <form action="./student.php?register=initial" method="post">    
+            <div class="float-right"> 
+                <button type="submit" name="Start_Register" value="true" class="btn btn-primary">Continue</button>
+            </div>
+        </form><br><br>
     </div>
 </div>
 </section>

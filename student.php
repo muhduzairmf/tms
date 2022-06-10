@@ -17,7 +17,7 @@
     include './views/components/NotFound.php';
     include './views/StudentUI.php';
 
-    error_reporting(0);
+    // error_reporting(0);
 
     // Render Navbar Basic
     navBasic();

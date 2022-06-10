@@ -1,25 +1,29 @@
 <?php
 include './views/components/BasicHeader.php';
 basicHeader("Register Student - Step 3");
+
+if (!isset($_COOKIE['student'])) {
+
+    header("Location: ./student.php?register=initial");
+
+}
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['Next_Finish'])) {
+
+    setcookie('student', 'step3', time() + 86400);
+    setcookie('methodPay', $_POST['methodPay'], time() + 86400);
+    header("Location: ./student.php?register=finish");
+
+}
+
 ?>
 <br><br>
 <section class="container py-2">
 <div class="columns">
     <div class="column col-6 col-sm-11 col-mx-auto">
         <form class="form-horizontal my-2" x-data="{
-            methodPay: 'Cash',
-            cash: true,
-            onlineBanking: false,
-            toggle() {
-                if (this.methodPay === 'Cash') {
-                    this.cash = true;
-                    this.onlineBanking = false;
-                } else if (this.methodPay === 'Online Banking') {
-                    this.cash = false;
-                    this.onlineBanking = true;
-                }
-            }
-        }" x-init="$watch('methodPay', value => toggle())">
+            methodPay: '<?php echo (isset($_COOKIE['methodPay'])) ? $_COOKIE['methodPay'] : "Cash"; ?>',
+        }" action="./student.php?register=step-3" method="post" autocomplete="off">
             <div class="form-group">
                 <div class="col-6 col-sm-12">
                     <label for="methodPay" class="form-label">Payment method for initial fee</label>
@@ -36,14 +40,14 @@ basicHeader("Register Student - Step 3");
                 </div>
             </div>
             <!-- if methodPay === 'Cash' -->
-            <div x-show="cash">
+            <div x-show="methodPay === 'Cash'">
                 <div class="divider"></div>
                 <p class="text-center"><strong>Cash</strong></p>
                 <br>
                 <p class="text-center"><strong>Please pay the initial fee to the clerk on duty</strong></p>
             </div>
-            <!-- else if methodPay === 'Online banking' -->
-            <div x-show="onlineBanking">
+            <!-- else if methodPay === 'Online Banking' -->
+            <div x-show="methodPay === 'Online Banking'">
                 <div class="divider"></div>
                 <p class="text-center"><strong>Online banking</strong></p>
                 <div class="form-group">
@@ -51,15 +55,15 @@ basicHeader("Register Student - Step 3");
                         <label for="onlineBanking" class="form-label">Upload the payment receipt here</label>
                     </div>
                     <div class="col-6 col-sm-12">
-                        <input type="file" name="onlineBanking" id="onlineBanking">
+                        <input type="file" id="onlineBanking">
                     </div>
                 </div>
             </div>
-            <p class="text-right">
-                <a href="/student.php?register=step-2" class="btn">Back</a>
-                <a href="/student.php?register=finish" class="btn btn-primary">Finish</a>
-            </p>
-        </form>
+            <div class="float-right">
+                <a href="./student.php?register=step-2" class="btn">Back</a>
+                <button type="submit" name="Next_Finish" value="true" class="btn btn-primary">Finish</button>
+            </div>
+        </form><br><br>
     </div>
 </div>
 </section>
