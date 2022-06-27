@@ -24,7 +24,7 @@ $features = [
     [
         'tab'=>'Staff',
         'section'=>'Teacher Salary Payment',
-        'url'=>'./clerk.php?tab=staff&section=salary-payment',
+        'url'=>'./clerk.php?tab=staff&section=teacher-salary-payment',
         'pic'=>'https://res.cloudinary.com/webalys/image/private/w_120,h_120,ar_1/f_auto/v1/icons/illustrations-duotone/work/office-workers/boss-sit-3-2-1fzvo8nkz7rqxehvt8xto.png'
     ],
     [

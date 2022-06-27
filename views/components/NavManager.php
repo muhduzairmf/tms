@@ -10,14 +10,14 @@ function navManager() {
             <a class="navbar-brand text-light mr-2">Cyber Saujana Tuition</a>
         </section>
         <section class="navbar-section px-2 py-2">
-            <a href="/manager.php?tab=home&section=main" class="btn btn-primary hide-md">&nbsp;Home&nbsp;</a>
+            <a href="./manager.php?tab=home&section=main" class="btn btn-primary hide-md">&nbsp;Home&nbsp;</a>
             <div class="dropdown dropdown-right hide-md">
                 <!-- /* Teacher tab */ -->
                 <button class="btn btn-primary dropdown-toggle" tabindex="0">
                     Teacher <i class="icon icon-caret"></i>
                 </button>
                 <ul class="menu">
-                    <li class="text-dark"><a class="btn btn-link" href="/manager.php?tab=teacher&section=approve-salary-payment">Approve Salary<br>Payment</a></li><br>
+                    <li class="text-dark"><a class="btn btn-link" href="./manager.php?tab=teacher&section=approve-salary-payment">Approve Salary<br>Payment</a></li><br>
                 </ul>
             </div>
             <div class="dropdown dropdown-right hide-md">
@@ -26,7 +26,7 @@ function navManager() {
                     Timetable <i class="icon icon-caret"></i>
                 </button>
                 <ul class="menu">
-                    <li class="text-dark"><a class="btn btn-link" href="/manager.php?tab=timetable&section=approve-new-timetable">Approve New Timetable</a></li>
+                    <li class="text-dark"><a class="btn btn-link" href="./manager.php?tab=timetable&section=approve-new-timetable">Approve New Timetable</a></li>
                 </ul>
             </div>
             <div class="dropdown dropdown-right hide-md">
@@ -35,8 +35,8 @@ function navManager() {
                     Setting <i class="icon icon-caret"></i>
                 </button>
                 <ul class="menu">
-                    <li class="text-dark"><a class="btn btn-link" href="/manager.php?tab=setting&section=about-me">About me</a></li>
-                    <li class="text-dark"><a class="btn btn-link" href="/manager.php?tab=setting&section=change-password">Change password</a></li>
+                    <li class="text-dark"><a class="btn btn-link" href="./manager.php?tab=setting&section=about-me">About me</a></li>
+                    <li class="text-dark"><a class="btn btn-link" href="./manager.php?tab=setting&section=change-password">Change password</a></li>
                     <li class="text-dark">
                         <form action="./auth/Logout.auth.php" method="post">
                             <button class="btn btn-link" type="submit" name="submit" value="Logout">Logout</button>
@@ -61,29 +61,29 @@ function navManager() {
                     <ul class="nav">
                         <li class="nav-item">
                             <!-- /* Home tab */ -->
-                            <a href="/manager.php?tab=home&section=main" class="h6 text-bold">Home</a>
+                            <a href="./manager.php?tab=home&section=main" class="h6 text-bold">Home</a>
                         </li>
                         <li class="nav-item">
                             <!-- /* Teacher tab */ -->
                             <a class="h6 text-bold">Teacher</a>
                             <ul class="nav">
-                                <li class="nav-item"><a href="/manager.php?tab=teacher&section=approve-salary-payment">Approve Salary Payment</a></li>
+                                <li class="nav-item"><a href="./manager.php?tab=teacher&section=approve-salary-payment">Approve Salary Payment</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
                             <!-- /* Timetable tab */ -->
                             <a class="h6 text-bold">Timetable</a>
                             <ul class="nav">
-                                <li class="nav-item"><a href="/manager.php?tab=timetable&section=approve-new-timetable">Approve New Timetable</a></li>
-                                <li class="nav-item"><a href="/manager.php?tab=timetable&section=current-timetable">Current Timetable</a></li>
+                                <li class="nav-item"><a href="./manager.php?tab=timetable&section=approve-new-timetable">Approve New Timetable</a></li>
+                                <li class="nav-item"><a href="./manager.php?tab=timetable&section=current-timetable">Current Timetable</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
                             <!-- /* Setting tab */ -->
                             <a class="h6 text-bold">Setting</a>
                             <ul class="nav">
-                                <li class="nav-item"><a href="/manager.php?tab=setting&section=about-me">About Me</a></li>
-                                <li class="nav-item"><a href="/manager.php?tab=setting&section=change-password">Change Password</a></li>
+                                <li class="nav-item"><a href="./manager.php?tab=setting&section=about-me">About Me</a></li>
+                                <li class="nav-item"><a href="./manager.php?tab=setting&section=change-password">Change Password</a></li>
                                 <li class="nav-item">&nbsp;
                                     <form action="./auth/Logout.auth.php" method="post">
                                         <button class="btn" type="submit" name="submit" value="Logout">Logout</button>

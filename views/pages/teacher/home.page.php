@@ -30,13 +30,13 @@ $features = [
     [
         'tab'=>'Salary',
         'section'=>'Salary Payment History',
-        'url'=>'/teacher.php?tab=salary&section=salary-payment-history',
+        'url'=>'./teacher.php?tab=salary&section=salary-payment-history',
         'pic'=>'https://res.cloudinary.com/webalys/image/private/w_120,h_120,ar_1/f_auto/v1/icons/illustrations-duotone/business/growth-profit-success/floating-cash-1-6r2qluhyyxwmzj8hgpgcy.png'
     ],
     [
         'tab'=>'Setting',
         'section'=>'About Me',
-        'url'=>'/teacher.php?tab=setting&section=about-me',
+        'url'=>'./teacher.php?tab=setting&section=about-me',
         'pic'=>'https://res.cloudinary.com/webalys/image/private/w_120,h_120,ar_1/f_auto/v1/icons/illustrations-duotone/users/user-identification/avatar-frame-6-632i6c3pcr7g2983zu9fp.png'
     ],
     [
