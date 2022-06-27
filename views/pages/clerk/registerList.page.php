@@ -10,13 +10,16 @@ $pending_list = $clerkController->findAllPendingStudent();
 $registered_list = $clerkController->findAllRegisteredStudent();
 
 $msg = "";
+$studentName = "";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     if (isset($_POST['Delete_Student_Id'])) {
         $msg = "The new student successfully deleted";
+        $studentName = $_POST['Delete_Student_Id'];
     } else if (isset($_POST['Confirm_Student_Id'])) {
         $msg = "The new student successfully added";
+        $studentName = $_POST['Confirm_Student_Id'];
     }
 
 }
@@ -68,6 +71,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <?php
 $count = 1;
 foreach ($pending_list as $student) {
+    if ($studentName == $student['name']) {
+        continue;
+    }
 ?>
                 <tbody>
                     <tr>
@@ -94,10 +100,10 @@ foreach ($pending_list as $student) {
     ?>
                         <td class="px-2">
                             <form action="./clerk.php?tab=student&section=register-list" method="post" style="display:inline;">
-                                <button class="btn" type="submit" name="Delete_Student_Id" value="<?php echo $count; ?>">Remove</button>&nbsp;
+                                <button class="btn" type="submit" name="Delete_Student_Id" value="<?php echo $student['name']; ?>">Remove</button>&nbsp;
                             </form>
                             <form action="./clerk.php?tab=student&section=register-list" method="post" style="display:inline;">
-                                <button class="btn btn-primary" type="submit" name="Confirm_Student_Id" value="<?php echo $count; ?>">Confirm</button>
+                                <button class="btn btn-primary" type="submit" name="Confirm_Student_Id" value="<?php echo $student['name']; ?>">Confirm</button>
                             </form>
                         </td>
                     </tr>
