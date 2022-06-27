@@ -1,11 +1,47 @@
 <?php
 include './views/components/BasicHeader.php';
 basicHeader("Confirm Availability");
+
+$msg = "";
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    
+    if (isset($_POST['Confirm_Availability'])) {
+        
+        $msg = "The timetable has been recorded as confirmed";
+
+    } else if (isset($_POST['Not_Available'])) {
+
+        $msg = "The timetable has been recorded as not available";
+        
+    }
+
+}
+
 ?>
 <section class="container">
     <br><br>
     <div class="columns">
         <div class="column col-6 col-mx-auto">
+        <?php
+        if (!empty($msg)) {
+            ?>
+            <div x-data="{
+                displayError: true,
+                close() {
+                    this.displayError = false;
+                }
+            }" x-show="displayError" x-transition.duration.500ms>
+                <div class="toast toast-primary mx-2">
+                    <button class="btn btn-clear float-right" x-on:click="close()"></button>
+                    <?php echo $msg; ?>
+                </div>
+                <br><br>
+            </div>
+            <?php
+        } 
+        if (empty($msg)) {
+        ?>
             <h5>Subject Information</h5>
             <hr>
             <div class="columns">
@@ -33,10 +69,20 @@ basicHeader("Confirm Availability");
                 </div>
             </div>
             <br>
+            <form action="./teacher.php?tab=timetable&section=confirm-availability" method="post">
             <p class="text-right">
-                <button class="btn">Not Available</button>
-                <button class="btn btn-primary">Confirm</button>
+                <button class="btn" type="submit" name="Not_Available" value="true">Not Available</button>
+                <button class="btn btn-primary" type="submit" name="Confirm_Availability" value="true">Confirm</button>
             </p>
+            </form>
+            <?php
+        } else {
+            ?>
+            <br><br>
+            <h4 class="text-center">No new timetable here</h4>
+            <?php
+        }
+        ?>
         </div>
     </div>
 </section>
