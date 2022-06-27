@@ -10,11 +10,19 @@ class User extends DbConfig {
     private $password;
     private $title;
 
+    public function insertNewUser() {
+        
+    }
+
     public function retrieveAllUser() {
 
     }
 
-    public function modifyUser() {
+    public function retrieveOneUser_whereEmail() {
+        
+    }
+
+    public function modifyUser_password() {
 
     }
 }
