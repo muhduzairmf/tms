@@ -118,10 +118,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             <label for="classes" class="form-label">Choose replacement class</label>
                         </div>
                         <div class="col-9">
-                            <select name="class" id="classes" on:change={chosingClass} class="form-select" <?php echo (isset($_POST['Subject_Class_Attendance']) || isset($_POST['Replace_Class_Attendance'])) ? 'disabled' : ''; ?>>
+                            <select name="class" id="classes" class="form-select" <?php echo (isset($_POST['Subject_Class_Attendance']) || isset($_POST['Replace_Class_Attendance'])) ? 'disabled' : ''; ?>>
                                 <option value="">Choose an option</option>
-                                <option value="Mathematics (Form 1-3), Mon 8.00 PM">Mathematics (Form 1-3), Mon 8.00 PM</option>
-                                <option value="Additional Mathematics (Form 4-5), Tue 9.00 PM">Additional Mathematics (Form 4-5), Tue 9.00 PM</option>
+                                <option value="Bahasa Melayu Standard 4-6, Sunday 11.00 AM">Bahasa Melayu Standard 4-6, Sunday 11.00 AM</option>
+                                <option value="Biology Form 4-5, Monday 9.00 PM">Biology Form 4-5, Monday 9.00 PM</option>
+                                <option value="Bahasa Melayu Form 1-3, Tuesday 8.00 PM">Bahasa Melayu Form 1-3, Tuesday 8.00 PM</option>
+                                <option value="English Standard 4-6, Wednesday 8.00 PM">English Standard 4-6, Wednesday 8.00 PM</option>
+                                <option value="Science Form 1-3, Wednesday 9.00 PM">Science Form 1-3, Wednesday 9.00 PM</option>
+                                <option value="Physics Form 4-5, Thursday 8.00 PM">Physics Form 4-5, Thursday 8.00 PM</option>
+                                <option value="English Form 1-3, Thursday 9.00 PM">English Form 1-3, Thursday 9.00 PM</option>
+                                <option value="Chemistry Form 4-5, Friday 8.00 PM">Chemistry Form 4-5, Friday 8.00 PM</option>
+                                <option value="Science Standard 4-6, Friday 9.00 PM">Science Standard 4-6, Friday 9.00 PM</option>
+                                <option value="Mathematics Standard 4-6, Saturday 11.00 AM">Mathematics Standard 4-6, Saturday 11.00 AM</option>
+                                <option value="Accounting Principles Form 4-5, Saturday 12.00 PM">Accounting Principles Form 4-5, Saturday 12.00 PM</option>
                             </select>
                         </div>
                     </div>
