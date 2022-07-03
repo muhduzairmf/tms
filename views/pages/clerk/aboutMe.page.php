@@ -10,7 +10,7 @@ basicHeader("About Me");
             <div class="card modified-card">
                 <div class="card-header">
                     <br>
-                    <h1 class="text-center"><figure class="avatar avatar-xl" data-initial="JO" style="background-color: #5755d9;"></figure></i></h1>
+                    <h1 class="text-center"><figure class="avatar avatar-xl" data-initial="KA" style="background-color: #5755d9;"></figure></i></h1>
                 </div>
                 <div class="card-footer">
                     <h2 class="text-center"><strong>Kamal Adli</strong></h2>
