@@ -10,16 +10,31 @@ $pending_list = $clerkController->findAllPendingStudent();
 $registered_list = $clerkController->findAllRegisteredStudent();
 
 $msg = "";
-$studentName = "";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     if (isset($_POST['Delete_Student_Id'])) {
         $msg = "The new student successfully deleted";
-        $studentName = $_POST['Delete_Student_Id'];
+
+        if ($_POST['Delete_Student_Id'] == "James Bond") {
+            $_SESSION['std1'] = $_POST['Delete_Student_Id'];
+        } else if ($_POST['Delete_Student_Id'] == "Alex Marlon") {
+            $_SESSION['std2'] = $_POST['Delete_Student_Id'];
+        } else if ($_POST['Delete_Student_Id'] == "Marie Larrson") {
+            $_SESSION['std3'] = $_POST['Delete_Student_Id'];
+        }
+        
     } else if (isset($_POST['Confirm_Student_Id'])) {
         $msg = "The new student successfully added";
-        $studentName = $_POST['Confirm_Student_Id'];
+        
+        if ($_POST['Confirm_Student_Id'] == "James Bond") {
+            $_SESSION['std1'] = $_POST['Confirm_Student_Id'];
+        } else if ($_POST['Confirm_Student_Id'] == "Alex Marlon") {
+            $_SESSION['std2'] = $_POST['Confirm_Student_Id'];
+        } else if ($_POST['Confirm_Student_Id'] == "Marie Larrson") {
+            $_SESSION['std3'] = $_POST['Confirm_Student_Id'];
+        }
+
     }
 
 }
@@ -71,7 +86,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <?php
 $count = 1;
 foreach ($pending_list as $student) {
-    if ($studentName == $student['name']) {
+    if (isset($_SESSION['std1']) && $_SESSION['std1'] == $student['name']) {
+        continue;
+    } else if (isset($_SESSION['std2']) && $_SESSION['std2'] == $student['name']) {
+        continue;
+    } else if (isset($_SESSION['std3']) && $_SESSION['std3'] == $student['name']) {
         continue;
     }
 ?>

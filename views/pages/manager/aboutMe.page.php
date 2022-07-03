@@ -9,11 +9,29 @@ basicHeader("About Me");
             <div class="card modified-card">
                 <div class="card-header">
                     <br>
-                    <h1 class="text-center"><figure class="avatar avatar-xl" data-initial="JA" style="background-color: #5755d9;"></figure></h1>
+                    <h1 class="text-center"><figure class="avatar avatar-xl" data-initial="<?php 
+                        if (isset($_SESSION['mngr_email'])) {
+                            if ($_SESSION['mngr_email'] == "saiful@email.com") {
+                                echo "SA";
+                            } else if ($_SESSION['mngr_email'] == "shahida@email.com") {
+                                echo "NU";
+                            }
+                        } else { echo "MA"; }
+                        ?>" style="background-color: #5755d9;"></figure></h1>
                 </div>
                 <div class="card-footer">
-                    <h2 class="text-center"><strong>Jack Frost</strong></h2>
-                    <h5 class="text-center">jackfrost@email.com</h5>
+                    <h2 class="text-center"><strong>
+                        <?php 
+                        if (isset($_SESSION['mngr_email'])) {
+                            if ($_SESSION['mngr_email'] == "saiful@email.com") {
+                                echo "Mr. Saiful Nizam";
+                            } else if ($_SESSION['mngr_email'] == "shahida@email.com") {
+                                echo "Ms. Nur Shahida";
+                            }
+                        } else { echo "Manager Name"; }
+                        ?>
+                    </strong></h2>
+                    <h5 class="text-center"><?php echo (isset($_SESSION['mngr_email'])) ? $_SESSION['mngr_email'] : "manager@email.com" ?></h5>
                     <h5 class="text-center">Manager in Cyber Saujana Tuition</h5>
                     <br>
                     <form action="./auth/Logout.auth.php" method="post"><button class="btn btn-primary p-centered" type="submit">Logout</button></form>

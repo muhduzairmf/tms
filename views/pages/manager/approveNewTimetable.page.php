@@ -55,13 +55,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="columns mt-2">
             <div class="column col-3">Day</div>
             <div class="column col-9">
-                :&nbsp;&nbsp;&nbsp;&nbsp; Monday
+                :&nbsp;&nbsp;&nbsp;&nbsp; Sunday
             </div>
         </div>
         <div class="columns mt-2">
             <div class="column col-3">Preferred time</div>
             <div class="column col-9">
-                :&nbsp;&nbsp;&nbsp;&nbsp; 8.00 PM
+                :&nbsp;&nbsp;&nbsp;&nbsp; 12.00 PM
             </div>
         </div>
         <div class="columns mt-2">
@@ -76,8 +76,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <div class="form-group">
                     <select class="form-select">
                         <option>Choose an option</option>
-                        <option>Ms. Aqila</option>
-                        <option>Mr. Puvaan</option>
+                        <option>Ms. Syahira</option>
+                        <option>Mr. Redzza</option>
                     </select>
                 </div>
             </div>

@@ -47,10 +47,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <div class="card modified-card">
                 <div class="card-header">
                     <div class="card-title text-center mb-2"><strong>Salary Payment Record</strong></div>
-                    <div class="card-subtitle">Receiver : Mr. Alex</div>
+                    <div class="card-subtitle">Receiver : Ms. Lim</div>
                     <div class="card-subtitle">Month of salary : December 2021</div>
                     <div class="card-subtitle">Position : Teacher/Tutor</div>
-                    <div class="card-subtitle">Subject to teach : Mathematics and Additional Mathematics</div>
+                    <div class="card-subtitle">Subject to teach : Mathematics (Standard 4-6) and Mathematics (Form 1-3)</div>
                 </div>
                 <div class="card-body">
                     <div class="columns">

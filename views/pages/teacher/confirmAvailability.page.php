@@ -53,13 +53,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <div class="columns">
                 <div class="column col-3">Day</div>
                 <div class="column col-9">
-                    :&nbsp;&nbsp;&nbsp;&nbsp; Monday
+                    :&nbsp;&nbsp;&nbsp;&nbsp; Sunday
                 </div>
             </div>
             <div class="columns">
                 <div class="column col-3">Preferred time</div>
                 <div class="column col-9">
-                    :&nbsp;&nbsp;&nbsp;&nbsp; 8.00 PM
+                    :&nbsp;&nbsp;&nbsp;&nbsp; 12.00 PM
                 </div>
             </div>
             <div class="columns">

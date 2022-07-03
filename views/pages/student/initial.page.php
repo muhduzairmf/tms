@@ -137,11 +137,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['Start_Register'])) {
                     </tr>
                     <tr>
                         <td>Standard 4-6</td>
-                        <td>2 subjects = RM90, 3 subjects = RM110, 4 subjects = RM130</td>
+                        <td>1 subject = RM45, 2 subjects = RM90, 3 subjects = RM110, 4 subjects = RM130</td>
                     </tr>
                     <tr>
                         <td>Form 1-3</td>
-                        <td>2 subjects = RM100, 3 subjects = RM120, 4 subjects = RM140</td>
+                        <td>1 subject = RM50, 2 subjects = RM100, 3 subjects = RM120, 4 subjects = RM140</td>
                     </tr>
                     <tr>
                         <td>Form 4-5</td>

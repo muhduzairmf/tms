@@ -36,7 +36,7 @@ basicHeader("My Subject");
                         <td> - </td>
                         <td> - </td>
                         <td>BM (F1-F3)</td>
-                        <td class="bg-primary">ADD MATH (F4-F5)</td>
+                        <td>ADD MATH (F4-F5)</td>
                     </tr>
                     <tr>
                         <td>Wednesday</td>
@@ -61,7 +61,7 @@ basicHeader("My Subject");
                     </tr>
                     <tr>
                         <td>Saturday</td>
-                        <td>MATH (S4-S6)</td>
+                        <td class="bg-primary">MATH (S4-S6)</td>
                         <td>ACC (F4-F5)</td>
                         <td> - </td>
                         <td> - </td>

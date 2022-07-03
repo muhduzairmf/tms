@@ -64,6 +64,42 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
     } else if ($_POST['submit'] == "Edit_Subject") {
         $payFeeForm = "false";
         $editSubjectForm = "true";
+        $count_subj = 0;
+
+        if (isset($_POST['BMF13'])) {
+            $count_subj += 1;
+        }
+        if (isset($_POST['ENGF13'])) {
+            $count_subj += 1;
+        }
+        if (isset($_POST['MATHF13'])) {
+            $count_subj += 1;
+        }
+        if (isset($_POST['SCIF13'])) {
+            $count_subj += 1;
+        }
+
+        switch ($count_subj) {
+            case 1:
+                $_SESSION['std_pay'] = "RM50.00";
+                break;
+                
+            case 2:
+                $_SESSION['std_pay'] = "RM100.00";
+                break;
+
+            case 3:
+                $_SESSION['std_pay'] = "RM120.00";
+                break;
+
+            case 4:
+                $_SESSION['std_pay'] = "RM140.00";
+                break;
+            
+            default:
+                $_SESSION['std_pay'] = "RM0.00";
+                break;
+        }
 
         $msg = "Subject to take successfully changed. The fee to pay for the student also applied";
     }
@@ -194,7 +230,19 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                             <td><?php echo $count; ?></td>
                             <td><?php echo $student['name']; ?></td>
                             <td><?php echo $student['icNum'] ?></td>
-                            <td>RM 100.00</td>
+                            <td>
+                                <?php
+                                if ($count == 1) {
+                                    echo (isset($_SESSION['std_pay'])) ? $_SESSION['std_pay'] : "RM 100.00";
+                                } else if ($count == 4 || $count == 6) {
+                                    echo "RM 100.00";
+                                } else if ($count == 3 || $count == 7 || $count == 9) {
+                                    echo "RM 120.00";
+                                } else {
+                                    echo "RM 140.00";
+                                }
+                                ?>
+                            </td>
                             <td>
                                 <div class="form-group">
                                     <?php 
@@ -254,7 +302,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                     <br>
                     <div class="card modified-card m-2">
                         <div class="card-header">
-                            <div class="card-title h4 text-bold">Name : Keith Foo</div>
+                            <div class="card-title h4 text-bold">Name : Raihan Nazeer Akeem</div>
                             <div class="card-subtitle text-dark h5">IC Number : <?php echo $_POST['icNumber']; ?></div>
                             <br>
                             <form action="./clerk.php?tab=student&section=fee-payment" method="post">

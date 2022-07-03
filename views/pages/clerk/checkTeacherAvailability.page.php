@@ -17,13 +17,13 @@ basicHeader("Check Teacher Availability");
             <div class="columns">
                 <div class="column col-3">Day</div>
                 <div class="column col-9">
-                    :&nbsp;&nbsp;&nbsp;&nbsp; Monday
+                    :&nbsp;&nbsp;&nbsp;&nbsp; Sunday
                 </div>
             </div>
             <div class="columns">
                 <div class="column col-3">Preferred time</div>
                 <div class="column col-9">
-                    :&nbsp;&nbsp;&nbsp;&nbsp; 8.00 PM
+                    :&nbsp;&nbsp;&nbsp;&nbsp; 12.00 PM
                 </div>
             </div>
             <div class="columns">
@@ -42,15 +42,15 @@ basicHeader("Check Teacher Availability");
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Mr. Chong</td>
+                        <td>Ms. Lim</td>
                         <td>Not Available</td>
                     </tr>
                     <tr>
-                        <td>Ms. Aqila</td>
+                        <td>Ms. Syahira</td>
                         <td>Available</td>
                     </tr>
                     <tr>
-                        <td>Mr. Puvaan</td>
+                        <td>Mr. Redzza</td>
                         <td><em>Not confirmed</em></td>
                     </tr>
                 </tbody>

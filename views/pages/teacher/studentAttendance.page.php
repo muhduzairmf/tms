@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $type = "My subject class";
             
             $teacherController = new TeacherController();
-            $studentList = $teacherController->findStudents();
+            $studentList = $teacherController->findAllStudent();
 
             $msg = "List of student " . $class . " successfully listed";
 
@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $type = "Replacement class";
             
             $teacherController = new TeacherController();
-            $studentList = $teacherController->findStudents();
+            $studentList = $teacherController->findAllStudent();
 
             $msg = "List of student " . $class . " successfully listed";
 
@@ -104,7 +104,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             <select name="class" id="classes" on:change={chosingClass} class="form-select" <?php echo (isset($_POST['Subject_Class_Attendance']) || isset($_POST['Replace_Class_Attendance'])) ? 'disabled' : ''; ?>>
                                 <option value="">Choose an option</option>
                                 <option value="Mathematics Form 1-3, Monday 8.00 PM">Mathematics Form 1-3, Monday 8.00 PM</option>
-                                <option value="Additional Mathematics Form 4-5, Tuesday 9.00 PM">Additional Mathematics Form 4-5, Tuesday 9.00 PM</option>
+                                <option value="Mathematics Standard 4-6, Saturday 11.00 AM">Mathematics Standard 4-6, Saturday 11.00 AM</option>
                             </select>
                         </div>
                     </div>
@@ -123,6 +123,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 <option value="Bahasa Melayu Standard 4-6, Sunday 11.00 AM">Bahasa Melayu Standard 4-6, Sunday 11.00 AM</option>
                                 <option value="Biology Form 4-5, Monday 9.00 PM">Biology Form 4-5, Monday 9.00 PM</option>
                                 <option value="Bahasa Melayu Form 1-3, Tuesday 8.00 PM">Bahasa Melayu Form 1-3, Tuesday 8.00 PM</option>
+                                <option value="Additional Mathematics Form 4-5,Tuesday 9.00 PM">Additional Mathematics Form 4-5,Tuesday 9.00 PM</option>
                                 <option value="English Standard 4-6, Wednesday 8.00 PM">English Standard 4-6, Wednesday 8.00 PM</option>
                                 <option value="Science Form 1-3, Wednesday 9.00 PM">Science Form 1-3, Wednesday 9.00 PM</option>
                                 <option value="Physics Form 4-5, Thursday 8.00 PM">Physics Form 4-5, Thursday 8.00 PM</option>
@@ -162,6 +163,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <?php
                         $count = 1;
                         foreach ($studentList as $student) {
+                            if ($class == "Mathematics Form 1-3, Monday 8.00 PM" || $class == "Bahasa Melayu Form 1-3, Tuesday 8.00 PM" || $class == "Science Form 1-3, Wednesday 9.00 PM" || $class == "English Form 1-3, Thursday 9.00 PM") {
+                                if ($student['category'] !== "Form 1-3") {
+                                    continue;
+                                }
+                            } else if ($class == "Mathematics Standard 4-6, Saturday 11.00 AM" || $class == "Bahasa Melayu Standard 4-6, Sunday 11.00 AM" || $class == "English Standard 4-6, Wednesday 8.00 PM" || $class == "Science Standard 4-6, Friday 9.00 PM") {
+                                if ($student['category'] !== "Standard 4-6") {
+                                    continue;
+                                }
+                            } else if ($class == "Biology Form 4-5, Monday 9.00 PM" || $class == "Physics Form 4-5, Thursday 8.00 PM" || $class == "Chemistry Form 4-5, Friday 8.00 PM" || $class == "Accounting Principles Form 4-5, Saturday 12.00 PM" || $class == "Additional Mathematics Form 4-5,Tuesday 9.00 PM") {
+                                if ($student['category'] !== "Form 4-5") {
+                                    continue;
+                                }
+                            }
                         ?>
                         <tr>
                             <td><?php echo $count; ?></td>

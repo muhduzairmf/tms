@@ -54,18 +54,23 @@ class Login {
         
         $users = [
             [
-                "email" => "teacher@email.com",
-                "password" => "teacher",
+                "email" => "lim@email.com",
+                "password" => "Lim12345",
                 "title" => "Teacher"
             ],
             [
-                "email" => "clerk@email.com",
-                "password" => "clerk",
+                "email" => "bazli@email.com",
+                "password" => "Bazli12345",
+                "title" => "Teacher"
+            ],
+            [
+                "email" => "kamal@email.com",
+                "password" => "Kamal12345",
                 "title" => "Clerk"
             ],
             [
-                "email" => "manager@email.com",
-                "password" => "manager",
+                "email" => "saiful@email.com",
+                "password" => "Saiful12345",
                 "title" => "Manager"
             ],
 
@@ -110,6 +115,12 @@ class Login {
         // $_SESSION['user_id'] = $this->id;
         // $_SESSION['user_email'] = $this->email;
         // $_SESSION['user_role'] = $this->role;
+
+        if ($this->title == "Teacher") {
+            $_SESSION['tcr_email'] = $this->email;
+        } else if ($this->title == "Manager") {
+            $_SESSION['mngr_email'] = $this->email;
+        }
 
         // Go to related home page for appropriate user
         $homepage = "./" . strtolower($this->title) . ".php?tab=home&section=main";

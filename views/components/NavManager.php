@@ -27,6 +27,7 @@ function navManager() {
                 </button>
                 <ul class="menu">
                     <li class="text-dark"><a class="btn btn-link" href="./manager.php?tab=timetable&section=approve-new-timetable">Approve New Timetable</a></li>
+                    <li class="nav-item"><a class="btn btn-link" href="./manager.php?tab=timetable&section=current-timetable">Current Timetable</a></li>
                 </ul>
             </div>
             <div class="dropdown dropdown-right hide-md">
