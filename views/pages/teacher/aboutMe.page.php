@@ -23,15 +23,15 @@ basicHeader("About Me");
                     <h2 class="text-center"><strong>
                         <?php 
                         if (isset($_SESSION['tcr_email'])) {
-                            if ($_SESSION['tcr_email'] == "meixing@email.com") {
+                            if ($_SESSION['tcr_email'] == "lim@email.com") {
                                 echo "Ms. Lim";
                             } else if ($_SESSION['tcr_email'] == "bazli@email.com") {
                                 echo "Mr. Bazli";
                             }
-                        } else { echo "Teacher Name"; }
+                        } else { echo "Mr. Bazli"; }
                         ?>
                     </strong></h2>
-                    <h5 class="text-center"><?php echo (isset($_SESSION['tcr_email'])) ? $_SESSION['tcr_email'] : "teacher@email.com" ?></h5>
+                    <h5 class="text-center"><?php echo (isset($_SESSION['tcr_email'])) ? $_SESSION['tcr_email'] : "bazli@email.com" ?></h5>
                     <h5 class="text-center">Teacher in Cyber Saujana Tuition</h5>
                     <br>
                     <form action="./auth/Logout.auth.php" method="post"><button class="btn btn-primary p-centered" type="submit">Logout</button></form>

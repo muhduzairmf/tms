@@ -28,10 +28,10 @@ basicHeader("About Me");
                             } else if ($_SESSION['mngr_email'] == "shahida@email.com") {
                                 echo "Ms. Nur Shahida";
                             }
-                        } else { echo "Manager Name"; }
+                        } else { echo "Ms. Nur Shahida"; }
                         ?>
                     </strong></h2>
-                    <h5 class="text-center"><?php echo (isset($_SESSION['mngr_email'])) ? $_SESSION['mngr_email'] : "manager@email.com" ?></h5>
+                    <h5 class="text-center"><?php echo (isset($_SESSION['mngr_email'])) ? $_SESSION['mngr_email'] : "shahida@email.com" ?></h5>
                     <h5 class="text-center">Manager in Cyber Saujana Tuition</h5>
                     <br>
                     <form action="./auth/Logout.auth.php" method="post"><button class="btn btn-primary p-centered" type="submit">Logout</button></form>
