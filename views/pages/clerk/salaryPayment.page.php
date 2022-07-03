@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
 
     if ($_POST['submit'] == "Generate_Salary_Payment") {
         
-        if (empty($_POST['teacher']) || empty($_POST['month']) || empty($_POST['grosspay']) || empty($_POST['bonus']) || empty($_POST['kwsp']) || empty($_POST['socso'])) {
+        if (empty($_POST['teacher']) || empty($_POST['month']) || empty($_POST['grosspay']) || empty($_POST['kwsp']) || empty($_POST['socso'])) {
             
             $msg = "Please fill up all information below";
     
