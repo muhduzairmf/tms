@@ -16,7 +16,7 @@ basicHeader("About Me");
                             } else if ($_SESSION['mngr_email'] == "shahida@email.com") {
                                 echo "NU";
                             }
-                        } else { echo "MA"; }
+                        } else { echo "NU"; }
                         ?>" style="background-color: #5755d9;"></figure></h1>
                 </div>
                 <div class="card-footer">

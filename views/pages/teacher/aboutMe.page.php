@@ -16,7 +16,7 @@ basicHeader("About Me");
                             } else if ($_SESSION['tcr_email'] == "bazli@email.com") {
                                 echo "BA";
                             }
-                        } else { echo "TE"; }
+                        } else { echo "BA"; }
                         ?>" style="background-color: #5755d9;"></figure></i></h1>
                 </div>
                 <div class="card-footer">
