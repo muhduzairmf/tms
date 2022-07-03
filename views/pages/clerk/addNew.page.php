@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     if (isset($_POST['Submit_New_Teacher'])) {
         
-        if (empty($_POST['name']) || empty($_POST['icNumber']) || empty($_POST['age']) || empty($_POST['phoneNumber']) || empty($_POST['email']) || empty($_POST['maritalStatus']) || empty($_POST['citizenship']) || empty($_POST['eduLevel'])) {
+        if (empty($_POST['name']) || empty($_POST['icNumber']) || empty($_POST['age']) || empty($_POST['phoneNumber']) || empty($_POST['email']) || empty($_POST['maritalStatus']) || empty($_POST['eduLevel'])) {
             
             $msg = "All field is required";
 

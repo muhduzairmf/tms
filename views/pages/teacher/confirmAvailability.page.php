@@ -62,12 +62,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     :&nbsp;&nbsp;&nbsp;&nbsp; 12.00 PM
                 </div>
             </div>
-            <div class="columns">
-                <div class="column col-3">Subject name</div>
-                <div class="column col-9">
-                    :&nbsp;&nbsp;&nbsp;&nbsp; Mathematics
-                </div>
-            </div>
             <br>
             <form action="./teacher.php?tab=timetable&section=confirm-availability" method="post">
             <p class="text-right">

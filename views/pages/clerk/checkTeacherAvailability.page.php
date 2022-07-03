@@ -43,6 +43,10 @@ basicHeader("Check Teacher Availability");
                 <tbody>
                     <tr>
                         <td>Ms. Lim</td>
+                        <td>Available</td>
+                    </tr>
+                    <tr>
+                        <td>Mr. Chong</td>
                         <td>Not Available</td>
                     </tr>
                     <tr>

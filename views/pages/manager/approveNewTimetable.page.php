@@ -76,8 +76,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <div class="form-group">
                     <select class="form-select">
                         <option>Choose an option</option>
+                        <option>Ms. Lim</option>
                         <option>Ms. Syahira</option>
-                        <option>Mr. Redzza</option>
                     </select>
                 </div>
             </div>

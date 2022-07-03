@@ -63,7 +63,7 @@ basicHeader("Salary Payment History");
                         ?></div>
                     <div class="card-subtitle">Month of salary : November 2021</div>
                     <div class="card-subtitle">Position : Teacher/Tutor</div>
-                    <div class="card-subtitle">Subject to teach : Mathematics (Standard 4-6) and Mathematics (Form 1-3)</div>
+                    <div class="card-subtitle">Subject to teach : Mathematics Standard 4-6, and Mathematics Form 1-3</div>
                 </div>
                 <div class="card-body">
                     <div class="columns">

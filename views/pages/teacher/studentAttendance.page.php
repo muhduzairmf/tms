@@ -95,7 +95,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     </li>
                 </ul>
                 <br><br>
-                <form action="/teacher.php?tab=my-class&section=student-attendance" method="post" class="form-horizontal" x-show="mySubjectClass">
+                <form action="./teacher.php?tab=my-class&section=student-attendance" method="post" class="form-horizontal" x-show="mySubjectClass">
                     <div class="form-group">
                         <div class="col-3">
                             <label for="classes" class="form-label">Choose my subject class</label>

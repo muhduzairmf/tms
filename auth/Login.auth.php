@@ -73,6 +73,11 @@ class Login {
                 "password" => "Saiful12345",
                 "title" => "Manager"
             ],
+            [
+                "email" => "shahida@email.com",
+                "password" => "Shahida12345",
+                "title" => "Manager"
+            ],
 
         ];
 
