@@ -130,7 +130,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['Finish_Register'])) {
             <p>Please confirm to the clerk on duty of your registration. After the clerk confirm the registration, you can officially become our students by submitting this registration form.</p>
             <br><br>
             <div class="float-right">
-                <a href="/student.php?register=step-3" class="btn">Back</a>
+                <a href="./student.php?register=step-3" class="btn">Back</a>
                 <form action="./student.php?register=finish" method="post" style="display: inline;">
                     <button class="btn btn-primary" type="submit" name="Finish_Register" value="true">Submit</button>
                 </form>

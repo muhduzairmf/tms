@@ -21,7 +21,7 @@
     <section class="hero hero-lg bg-gray">
         <article class="hero-body">
             <h1 class="text-center">The top best quality and exciting tuition centre in Selangor. Focused for providing students to professional and qualified teachers.</h1>
-            <p class="text-center"><a class="btn btn-primary" href="/student.php?register=initial">Register now</a></p>
+            <p class="text-center"><a class="btn btn-primary" href="./student.php?register=initial">Register now</a></p>
         </article>
     </section>
 </nav>
