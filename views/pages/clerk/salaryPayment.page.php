@@ -26,10 +26,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
             
             $receiver = $_POST['teacher'];
             $month = $_POST['month'];
-            $grosspay = (float)$_POST['grosspay'];
-            $bonus = (float)$_POST['bonus'];
-            $kwsp = (float)$_POST['kwsp'];
-            $socso = (float)$_POST['socso'];  
+            $grosspay = $_POST['grosspay'];
+            $bonus = $_POST['bonus'];
+            $kwsp = $_POST['kwsp'];
+            $socso = $_POST['socso'];  
             
             $msg = "Please check the information below before requesting salary payment approval to the manager";
     
