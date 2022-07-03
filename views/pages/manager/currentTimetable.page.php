@@ -20,7 +20,7 @@ basicHeader("Current Timetable");
                     <tr>
                         <td>Sunday</td>
                         <td>BM (S4-S6)</td>
-                        <td> - </td>
+                        <td>MATH (S4-S6)</td>
                         <td> - </td>
                         <td> - </td>
                     </tr>
@@ -61,7 +61,7 @@ basicHeader("Current Timetable");
                     </tr>
                     <tr>
                         <td>Saturday</td>
-                        <td>MATH (S4-S6)</td>
+                        <td></td>
                         <td>ACC (F4-F5)</td>
                         <td> - </td>
                         <td> - </td>

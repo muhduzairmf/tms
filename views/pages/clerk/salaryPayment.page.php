@@ -114,7 +114,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                         <label for="grosspay" class="form-label">Gross Pay</label>
                     </div>
                     <div class="col-3">
-                        <input type="number" class="form-input" name="grosspay" <?php echo (isset($_POST['submit']) && $_POST['submit'] == "Generate_Salary_Payment") ? "disabled" : ""; ?>>
+                        <input type="text" class="form-input" name="grosspay" <?php echo (isset($_POST['submit']) && $_POST['submit'] == "Generate_Salary_Payment") ? "disabled" : ""; ?>>
                     </div>
                 </div>
                 <div class="form-group">
@@ -122,7 +122,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                         <label for="bonus" class="form-label">Bonus</label>
                     </div>
                     <div class="col-3">
-                        <input type="number" class="form-input" name="bonus" <?php echo (isset($_POST['submit']) && $_POST['submit'] == "Generate_Salary_Payment") ? "disabled" : ""; ?>>
+                        <input type="text" class="form-input" name="bonus" <?php echo (isset($_POST['submit']) && $_POST['submit'] == "Generate_Salary_Payment") ? "disabled" : ""; ?>>
                     </div>
                 </div>
                 <div class="form-group">
@@ -130,7 +130,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                         <label for="kwsp" class="form-label">KWSP</label>
                     </div>
                     <div class="col-3">
-                        <input type="number" class="form-input" name="kwsp" <?php echo (isset($_POST['submit']) && $_POST['submit'] == "Generate_Salary_Payment") ? "disabled" : ""; ?>>
+                        <input type="text" class="form-input" name="kwsp" <?php echo (isset($_POST['submit']) && $_POST['submit'] == "Generate_Salary_Payment") ? "disabled" : ""; ?>>
                     </div>
                 </div>
                 <div class="form-group">
@@ -138,7 +138,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                         <label for="socso" class="form-label">SOCSO</label>
                     </div>
                     <div class="col-3">
-                        <input type="number" class="form-input" name="socso" <?php echo (isset($_POST['submit']) && $_POST['submit'] == "Generate_Salary_Payment") ? "disabled" : ""; ?>>
+                        <input type="text" class="form-input" name="socso" <?php echo (isset($_POST['submit']) && $_POST['submit'] == "Generate_Salary_Payment") ? "disabled" : ""; ?>>
                     </div>
                 </div>
                 <br>
