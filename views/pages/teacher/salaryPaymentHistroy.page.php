@@ -70,7 +70,7 @@ basicHeader("Salary Payment History");
                         <div class="column">
                             Gross Pay : RM 1700.00
                             <br>Perfomance Allowance: RM 200.00 (100%)
-                            <br>Bonus : RM 0
+                            <br>Bonus : RM 100.00
                         </div>
                         <div class="divider-vert"></div>
                         <div class="column">
@@ -82,7 +82,7 @@ basicHeader("Salary Payment History");
                 <div class="card-footer">
                     <div class="columns">
                         <div class="column col-6 col-mx-auto">
-                        <p class="text-right">TOTAL PAY: RM 1700.00</p>
+                        <p class="text-right">TOTAL PAY: RM 1800.00</p>
                         </div>
                     </div>
                 </div>
